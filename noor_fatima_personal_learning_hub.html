@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noor Fatima | Personal Learning Hub</title>
+<style>
+:root{--green:#087a3d;--deep:#123b2a;--mint:#eaf6ee;--ink:#1d2b24;--muted:#617168;--line:#d9e8dd;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5faf6;color:var(--ink);line-height:1.6}
+header{background:linear-gradient(135deg,#0b7139,#164b32);color:white;padding:34px 20px}
+.wrap{max-width:1050px;margin:auto;padding:0 18px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.1rem;letter-spacing:.04em}.tag{font-size:.9rem;opacity:.9}
+.hero{padding:40px 0 24px;max-width:720px}.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 14px}.hero p{font-size:1.08rem;margin:0;color:#e6f4e9}
+.pill{display:inline-block;background:#dff3e5;color:#075b30;padding:6px 12px;border-radius:99px;font-size:.85rem;font-weight:700;margin-bottom:14px}
+nav{display:flex;gap:18px;flex-wrap:wrap;padding:15px 0}nav a{color:white;text-decoration:none;font-weight:700;font-size:.94rem}
+main{padding:30px 0 55px}.section{margin:22px 0}.section h2{font-size:1.55rem;margin:0 0 14px;color:var(--deep)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 5px 18px rgba(15,65,35,.045)}
+.card h3{margin:0 0 8px;color:var(--deep)}.muted{color:var(--muted)}
+.subject{border-left:4px solid var(--green)}.meta{font-size:.9rem;color:var(--muted)}
+.steps{counter-reset:step;list-style:none;padding:0}.steps li{counter-increment:step;padding:12px 12px 12px 48px;position:relative;border-bottom:1px solid var(--line)}
+.steps li:before{content:counter(step);position:absolute;left:8px;top:10px;background:var(--mint);color:var(--green);width:27px;height:27px;border-radius:50%;display:grid;place-items:center;font-weight:800}
+.button{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700;margin-top:8px}
+.notice{background:#fff8e8;border:1px solid #f1dfb4;border-radius:14px;padding:15px;color:#6b531b}
+footer{background:#123b2a;color:#eaf6ee;padding:25px 0;font-size:.92rem}
+a{color:var(--green)}footer a{color:white}
+@media(max-width:600px){header{padding-top:25px}.hero{padding-top:30px}nav{gap:12px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="top"><div><div class="brand">NOOR FATIMA · LEARNING HUB</div><div class="tag">Personal online learning space</div></div><div class="tag">Independent Online Tutor</div></div>
+  <nav><a href="#subjects">Subjects</a><a href="#classes">Class Information</a><a href="#how">How lessons work</a><a href="#contact">Contact</a></nav>
+  <div class="hero"><span class="pill">Welcome, students</span><h1>Learn with clarity. Build confidence.</h1><p>A simple learning space for school students studying Geography, History, Pakistan Studies, Urdu and Computer Science.</p></div>
+ </div>
+</header>
+<main class="wrap">
+ <section class="section" id="subjects"><h2>Subjects and classes</h2><div class="grid">
+  <article class="card subject"><h3>Geography</h3><p class="muted">Classes 4–10</p><p>Concept explanations, map-related topics and revision support.</p></article>
+  <article class="card subject"><h3>History</h3><p class="muted">Classes 4–10</p><p>Historical events, timelines and topic-based learning.</p></article>
+  <article class="card subject"><h3>Pakistan Studies</h3><p class="muted">Classes 4–10</p><p>Structured explanations and exam preparation support.</p></article>
+  <article class="card subject"><h3>Urdu</h3><p class="muted">Classes 4–10</p><p>Reading, writing, grammar and lesson support.</p></article>
+  <article class="card subject"><h3>Computer Science</h3><p class="muted">Classes 4–8</p><p>Computer fundamentals and age-appropriate subject lessons.</p></article>
+ </div></section>
+ <section class="section" id="classes"><h2>Class information</h2><div class="grid">
+  <div class="card"><h3>Live lesson platform</h3><p>Online classes are conducted through Zoom. Enrolled students receive the meeting details directly.</p></div>
+  <div class="card"><h3>Availability</h3><p>12:30 PM – 4:00 PM</p><p class="meta">Pakistan Standard Time (PKT). Confirm the lesson slot before joining.</p></div>
+  <div class="card"><h3>Tuition fee</h3><p><strong>USD $100 per month</strong></p><p class="meta">Confirm subject, class level and schedule before enrollment.</p></div>
+ </div></section>
+ <section class="section" id="how"><h2>How to use this learning hub</h2><div class="card"><ol class="steps">
+  <li>Confirm your subject, class level and lesson schedule with the tutor.</li>
+  <li>Receive your Zoom class details directly after the lesson is arranged.</li>
+  <li>Join your live lesson on time and keep your textbook and notebook ready.</li>
+  <li>Use the notes and learning materials shared with you during your lessons.</li>
+ </ol></div></section>
+ <section class="section"><h2>Student resources</h2><div class="card"><p>Lesson notes, worksheets and revision materials can be shared with enrolled students directly.</p><div class="notice"><strong>Student privacy:</strong> This public page does not display private Zoom meeting IDs, passwords, student records or personal class files.</div></div></section>
+ <section class="section" id="contact"><h2>Contact the tutor</h2><div class="card"><h3>Noor Fatima</h3><p class="muted">Independent online tutor · 2 years of teaching experience</p><p>For class enquiries and scheduling, contact:</p><a class="button" href="mailto:noorrising028@gmail.com?subject=Learning%20Hub%20Enquiry">Email Noor Fatima</a></div></section>
+</main>
+<footer><div class="wrap">© Noor Fatima · Personal Learning Hub<br><span>Live teaching is provided through Zoom. This page is an informational learning portal and does not provide student logins, grade tracking, payments or file uploads.</span></div></footer>
+</body>
+</html>
