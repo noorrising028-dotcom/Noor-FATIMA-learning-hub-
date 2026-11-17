@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Noor Fatima — Online Teacher for Urdu, Islamiat, Tarjuma-tul-Quran, History, Geography and Pakistan Studies.">
+  <title>Noor Fatima | Online Educator</title>
+  <style>
+    :root {
+      --ink: #1d2b28;
+      --muted: #63716b;
+      --green: #176b55;
+      --green-dark: #104c3e;
+      --mint: #eaf4ef;
+      --cream: #fbfaf6;
+      --gold: #d6a84f;
+      --white: #fff;
+      --line: #e4eae5;
+      --shadow: 0 18px 50px rgba(24, 54, 43, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--cream); color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10; background: rgba(251,250,246,.92);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 74px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.15rem; }
+    .brand span { color: var(--green); }
+    nav { display:flex; gap:25px; align-items:center; font-size:.92rem; color:var(--muted); }
+    nav a:hover { color:var(--green); }
+    .nav-cta, .btn {
+      display:inline-flex; align-items:center; justify-content:center; border-radius:999px;
+      padding:12px 21px; background:var(--green); color:white; font-weight:700;
+      border:1px solid var(--green); transition:.2s ease;
+    }
+    .nav-cta:hover, .btn:hover { background:var(--green-dark); transform:translateY(-1px); }
+    .btn.secondary { background:transparent; color:var(--green); }
+    .btn.secondary:hover { background:var(--mint); }
+    .hero { padding:86px 0 76px; background: radial-gradient(circle at 85% 20%, #e3f0e8 0, transparent 32%), var(--cream); }
+    .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; align-items:center; gap:65px; }
+    .eyebrow { color:var(--green); text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; font-weight:800; }
+    h1 { font-size:clamp(2.8rem, 6vw, 5.2rem); line-height:1.04; letter-spacing:-.065em; margin:18px 0 22px; }
+    h1 span { color:var(--green); }
+    .lead { color:var(--muted); font-size:1.12rem; max-width:610px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .hero-note { display:flex; gap:12px; align-items:center; margin-top:34px; color:var(--muted); font-size:.9rem; }
+    .dot { width:9px; height:9px; border-radius:50%; background:var(--gold); }
+    .profile-card {
+      min-height:390px; border-radius:30px; background:linear-gradient(145deg,#176b55,#0f493d);
+      padding:28px; color:white; position:relative; overflow:hidden; box-shadow:var(--shadow);
+      display:flex; flex-direction:column; justify-content:space-between;
+    }
+    .profile-card:before, .profile-card:after { content:""; position:absolute; border:1px solid rgba(255,255,255,.16); border-radius:50%; }
+    .profile-card:before { width:300px; height:300px; right:-90px; top:-90px; }
+    .profile-card:after { width:220px; height:220px; right:-50px; top:-50px; }
+    .avatar {
+      width:112px; height:112px; border:1px solid rgba(255,255,255,.45); border-radius:50%;
+      display:grid; place-items:center; background:rgba(255,255,255,.12); font-size:2.3rem; font-weight:800;
+      position:relative; z-index:1;
+    }
+    .profile-card h2 { font-size:1.8rem; margin:24px 0 4px; letter-spacing:-.04em; }
+    .profile-card p { color:rgba(255,255,255,.78); margin:0; }
+    .profile-tag { align-self:flex-start; padding:8px 13px; border-radius:999px; background:rgba(255,255,255,.12); font-size:.82rem; }
+    section { padding:78px 0; }
+    .section-head { max-width:650px; margin-bottom:34px; }
+    .section-head h2 { font-size:clamp(2rem,4vw,3rem); letter-spacing:-.055em; line-height:1.12; margin:10px 0 14px; }
+    .section-head p { color:var(--muted); margin:0; }
+    .about-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:55px; align-items:start; }
+    .quote { background:var(--mint); padding:30px; border-radius:22px; font-size:1.2rem; font-weight:650; color:var(--green-dark); }
+    .about-copy p { color:var(--muted); margin-top:0; }
+    .subjects { background:#f0f5f1; }
+    .subject-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .subject {
+      background:white; border:1px solid var(--line); border-radius:20px; padding:23px;
+      min-height:150px; transition:.2s ease;
+    }
+    .subject:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+    .subject .num { color:var(--gold); font-weight:800; font-size:.8rem; letter-spacing:.12em; }
+    .subject h3 { margin:13px 0 4px; font-size:1.15rem; }
+    .subject p { color:var(--muted); margin:0; font-size:.9rem; }
+    .approach-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .approach-item { border-top:2px solid var(--gold); padding-top:18px; }
+    .approach-item h3 { margin:0 0 8px; }
+    .approach-item p { margin:0; color:var(--muted); }
+    .contact { background:var(--green-dark); color:white; }
+    .contact .section-head p { color:rgba(255,255,255,.72); }
+    .contact-row { display:flex; justify-content:space-between; align-items:center; gap:30px; flex-wrap:wrap; }
+    .contact .btn { background:white; color:var(--green-dark); border-color:white; }
+    .contact .btn:hover { background:var(--mint); }
+    footer { padding:24px 0; color:var(--muted); font-size:.88rem; }
+    footer .wrap { display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+    .placeholder { font-size:.8rem; opacity:.72; }
+    @media (max-width:800px) {
+      nav { display:none; }
+      .hero { padding:58px 0; }
+      .hero-grid, .about-grid { grid-template-columns:1fr; gap:34px; }
+      .profile-card { min-height:310px; }
+      .subject-grid { grid-template-columns:repeat(2,1fr); }
+      .approach-grid { grid-template-columns:1fr; }
+      section { padding:60px 0; }
+    }
+    @media (max-width:480px) {
+      .wrap { width:min(100% - 28px, 1100px); }
+      .subject-grid { grid-template-columns:1fr; }
+      .nav-cta { padding:10px 15px; font-size:.85rem; }
+      .hero-grid { gap:28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">Noor <span>Fatima</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#subjects">Subjects</a><a href="#approach">Teaching</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Online Educator · Learning with purpose</div>
+          <h1>Learn with<br><span>Noor Fatima.</span></h1>
+          <p class="lead">Helping students build understanding and confidence in languages, Islamic studies, social sciences and Pakistan Studies.</p>
+          <div class="actions">
+            <a class="btn" href="#subjects">Explore subjects</a>
+            <a class="btn secondary" href="#contact">Contact me</a>
+          </div>
+          <div class="hero-note"><span class="dot"></span> Clear concepts · Supportive learning · Online lessons</div>
+        </div>
+        <div class="profile-card">
+          <div class="avatar" aria-label="Initials NF">NF</div>
+          <div>
+            <div class="profile-tag">Your learning journey starts here</div>
+            <h2>Noor Fatima</h2>
+            <p>Online Teacher · Humanities & Languages</p>
+          </div>
+          <div class="placeholder">Personal teaching portfolio</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="quote">“My goal is to make learning clear, meaningful and engaging for every student.”</div>
+        <div class="about-copy">
+          <div class="eyebrow">A little about me</div>
+          <div class="section-head"><h2>Education that builds understanding.</h2></div>
+          <p>Welcome! I’m Noor Fatima, an online educator offering learning support in Urdu, Islamiat, Tarjuma-tul-Quran, History, Geography and Pakistan Studies.</p>
+          <p>This space is designed to help students learn with clarity, strengthen their concepts and develop confidence in their studies.</p>
+          <div class="eyebrow" style="margin-top:24px">Education & computer skills</div>
+          <p><strong>Matriculation — Computer Science</strong></p>
+          <p><strong>Additional computer courses:</strong> MS Word, Social Media Marketing, Basic SEO, Basic Editing and Basic Computer Skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="subjects" id="subjects">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Learning areas</div>
+          <h2>Subjects I teach</h2>
+          <p>Explore the subjects available for online learning support.</p>
+        </div>
+        <div class="subject-grid">
+          <article class="subject"><div class="num">01</div><h3>Urdu</h3><p>اردو زبان و ادب</p></article>
+          <article class="subject"><div class="num">02</div><h3>Islamiat</h3><p>اسلامیات</p></article>
+          <article class="subject"><div class="num">03</div><h3>Tarjuma-tul-Quran</h3><p>ترجمۃ القرآن</p></article>
+          <article class="subject"><div class="num">04</div><h3>History</h3><p>تاریخ</p></article>
+          <article class="subject"><div class="num">05</div><h3>Geography</h3><p>جغرافیہ</p></article>
+          <article class="subject"><div class="num">06</div><h3>Pakistan Studies</h3><p>مطالعہ پاکستان</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Teaching approach</div>
+          <h2>Learning, step by step.</h2>
+          <p>A good lesson should make difficult ideas easier to understand.</p>
+        </div>
+        <div class="approach-grid">
+          <div class="approach-item"><h3>Clear explanations</h3><p>Break topics into manageable ideas and explain them in a student-friendly way.</p></div>
+          <div class="approach-item"><h3>Concept-based learning</h3><p>Focus on understanding the topic instead of relying only on memorisation.</p></div>
+          <div class="approach-item"><h3>Questions & practice</h3><p>Use discussion and practice to help reinforce what students have learned.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-row">
+        <div class="section-head" style="margin:0">
+          <div class="eyebrow" style="color:#e8c77e">Let’s connect</div>
+          <h2>Ready to learn?</h2>
+          <p>For lesson enquiries, availability and further details, get in touch.</p>
+          <p class="placeholder">Before publishing, replace the contact link with your email address or WhatsApp number.</p>
+        </div>
+        <a class="btn" href="mailto:noorrising028@gmail.com?subject=Online%20Lesson%20Enquiry" target="_blank" rel="noopener">Email for enquiries</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>© <span id="year"></span> Noor Fatima · Online Educator</span><span>Made for learning.</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
